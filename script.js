@@ -23,7 +23,6 @@ passwordInput.addEventListener('input', function() {
 const warningMessage = document.querySelector('#warning');
     if (passwordInput.checkValidity()) {
         warningMessage.classList.add('hidden');
-        console.log('Valid')
     } else {
         warningMessage.classList.remove('hidden');
     }
