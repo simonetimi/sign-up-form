@@ -18,3 +18,17 @@ const passwordInput = document.querySelector('#pass');
 const passwordInputConfirm = document.querySelector('#confirm');
 passwordInput.addEventListener("input", validatePassword);
 passwordInputConfirm.addEventListener("input", validatePassword);
+
+passwordInput.addEventListener('input', function() {
+const warningMessage = document.querySelector('#warning');
+    if (passwordInput.checkValidity()) {
+        warningMessage.classList.add('hidden');
+        console.log('Valid')
+    } else {
+        warningMessage.classList.remove('hidden');
+    }
+});
+
+let yearFooter = document.querySelector('#year');
+let currentYear = new Date().getFullYear();
+yearFooter.textContent = currentYear;
