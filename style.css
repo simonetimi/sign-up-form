@@ -19,7 +19,7 @@ strong {
 }
 
 .company {
-    font-size: 30px;
+    font-size: 36px;
     font-family: 'Playfair Display', serif;
     color: #5B6E80;
 }
@@ -179,6 +179,15 @@ input[type=password] {
     border: 1px solid rgb(229, 229, 229);
 }
 
+input:invalid {
+    box-shadow: none;
+}
+
+input:focus:invalid + ::before {
+    content: "✖";
+    color: rgb(190, 32, 32);
+  }
+
 button {
     width: 160px;
     height: 40px;
@@ -202,5 +211,11 @@ button:hover {
     border: 1px solid #5B6E80;
     box-shadow: 0px 15px 20px #80909f;
     color: #fff;
-    transform: translateY(-7px);
+    transform: translateY(-5px);
+}
+
+.error-message {
+    font-size: 11px;
+    color: rgb(190, 32, 32);
+    position: fixed;
 }

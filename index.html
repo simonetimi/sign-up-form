@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-up | Special Education Services</title>
@@ -41,35 +42,45 @@
                 <div class="column">
                     <div class="form-block">
                         <label for="name">First name</label>
-                        <input maxlength="20" minlength="2" type="text" id="name" required>
+                        <input tabindex="1" maxlength="20" minlength="2" type="text" id="name" required>
+                        <span></span>
                     </div>
                     <div class="form-block">
-                        <label for="email">Email</label>
-                        <input maxlength="30" type="email" id="email" placeholder="nome@esempio.it" required>
+                        <label for="email">Email<span></span></label>
+                        <input tabindex="3" maxlength="30" type="email" id="email" placeholder="nome@esempio.it" required>
+                        <span></span>
                     </div>
                     <div class="form-block">
-                        <label for="pass">Password</label>
-                        <input pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" maxlength="30" type="password" id="pass" required>
+                        <label for="pass">Password<span></span></label>
+                        <input tabindex="5" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                            maxlength="30" type="password" id="pass" required>
+                            <span></span>
                     </div>
+                        <p id="error-message" class="error-message"></p>
                     <div class="form-block-spec">
-                        <button type="submit">Create account</button>
+                        <button type="submit" id="submit">Create account<span></span></button>
                     </div>
                 </div>
                 </div>
 
                 <div class="column">
                     <div class="form-block">
-                        <label for="last-name">Last name</label>
-                        <input maxlength="20" minlength="2" type="text" id="last-name" required>
+                        <label for="last-name">Last name<span></span></label>
+                        <input tabindex="2" maxlength="20" minlength="2" type="text" id="last-name" required>
+                        <span></span>
                     </div>
                     <div class="form-block">
-                        <label for="phone">Phone number</label>
-                        <input maxlength="13" type="tel" id="phone" value="+39" required>
+                        <label for="phone">Phone number<span></span></label>
+                        <input tabindex="4" maxlength="5" maxlength="13" type="tel" id="phone" value="+39" required>
+                        <span></span>
                     </div>
                     <div class="form-block">
-                        <label for="confirm">Confirm password</label>
-                        <input type="password" id="confirm" required>
+                        <label for="confirm">Confirm password<span></span></label>
+                        <input tabindex="6" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                            maxlength="30" type="password" id="confirm" required>
+                            <span></span>
                     </div>
+
                 </div>
             </form>
         </section>
